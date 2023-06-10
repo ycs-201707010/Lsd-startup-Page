@@ -1,3 +1,5 @@
+@import url("./clock.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +8,20 @@
 }
 
 :root {
-  /* colors */
-  --background: #0e0e0e;
+  /* default colors */
+  --background: #15202b;
   --foreground: #f1f1f1;
+
+  /* colors for command */
+  --twitter: #1c96e2;
+  --insta: linear-gradient(45deg, #445ce5, #7a3fbd, #db3171, #fc1e21);
+  --discord: #7289da;
+  --twitch: linear-gradient(to right bottom, #6341a4, #4d377f);
+  --youtube: linear-gradient(to right bottom, #cd221f, #cd4b1f);
+  --spotify: #1dd35e;
+  --netflix: #df0813;
+  --github: linear-gradient(to right bottom, #2b2b2b, #3b3b3b);
+  --naver: linear-gradient(135deg, #f2ce4d, #7db658, #20a16a, #3f8dd8);
 
   /* fonts */
   --base-font-size: 18px;
@@ -18,14 +31,15 @@
 
 @font-face {
   font-family: "Metropolis";
-  src: local("Metropolis-Medium"), url("./assets/fonts/Metropolis-Medium.woff2");
+  src: local("Metropolis-Medium"),
+    url("../assets/fonts/Metropolis-Medium.woff2");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Metropolis";
-  src: local("Metropolis-Bold"), url("./assets/fonts/Metropolis-Black.woff2");
+  src: local("Metropolis-Bold"), url("../assets/fonts/Metropolis-Black.woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -58,20 +72,12 @@ body {
   justify-content: center;
 }
 
-#clock {
-  display: block;
-  font-size: 7rem;
-  text-align: center;
-  letter-spacing: 0.05rem;
-  cursor: pointer;
-}
-
 .search #search-area input {
   display: none;
   height: 50px;
   border: none;
   outline: none;
-  background: var(--background);
+  background: transparent;
   color: var(--foreground);
   font-size: 2.5rem;
   font-weight: var(--font-weight-bold);

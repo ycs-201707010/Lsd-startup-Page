@@ -1,0 +1,7 @@
+#clock {
+  display: block;
+  font-size: 7rem;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+}

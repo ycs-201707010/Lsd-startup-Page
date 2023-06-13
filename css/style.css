@@ -73,7 +73,8 @@ body {
 }
 
 .search #search-area input {
-  display: none;
+  display: block;
+  visibility: hidden;
   height: 50px;
   border: none;
   outline: none;

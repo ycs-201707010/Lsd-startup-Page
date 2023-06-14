@@ -22,6 +22,11 @@ function inputToBgChange(e) {
   const lowValue = searchInput.value.toLowerCase();
   const com = lowValue.substr(0, 3);
 
+  for (k in commands) {
+    if (com === k.key || com.startWith(`${k.key}:`)) {
+      // pageBody.style.background =
+    }
+  }
   if (com === "y" || com.startsWith("y:")) {
     pageBody.style.background = "var(--youtube)";
   } else if (com === "g" || com.startsWith("g:")) {

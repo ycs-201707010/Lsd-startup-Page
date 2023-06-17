@@ -5,7 +5,7 @@ function launchFolder() {
     categorySet.add(commands[i].category);
   }
 
-  console.log(categorySet);
+  const categoryArray = Array.from(categorySet);
 }
 
 /** 시계 부분을 클릭하면 나오는 바로가기 폴더를 생성하는 함수 */

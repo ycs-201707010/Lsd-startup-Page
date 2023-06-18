@@ -92,20 +92,20 @@ function keyUpMethod(e) {
   }
 }
 
-pageBody.addEventListener("keydown", keyDownMethod);
-pageBody.addEventListener("keyup", keyUpMethod);
-searchInput.onfocus = () => {
-  clock.style.display = "none";
-};
+// pageBody.addEventListener("keydown", keyDownMethod);
+// pageBody.addEventListener("keyup", keyUpMethod);
+// searchInput.onfocus = () => {
+//   clock.style.display = "none";
+// };
 
-searchInput.onblur = () => {
-  //console.log("potato");
-  pageBody.style.background = "var(--background)";
-  searchInput.value = "";
-  clock.style.display = "block";
-  searchInput.style.visibility = "hidden";
-  //console.log("value : ", searchInput.value);
-};
+// searchInput.onblur = () => {
+//   //console.log("potato");
+//   pageBody.style.background = "var(--background)";
+//   searchInput.value = "";
+//   clock.style.display = "block";
+//   searchInput.style.visibility = "hidden";
+//   //console.log("value : ", searchInput.value);
+// };
 
-getClock();
-setInterval(getClock, 1000);
+// getClock();
+// setInterval(getClock, 1000);

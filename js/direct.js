@@ -32,7 +32,7 @@ function buildAndAppendLists() {
 function buildListItem(currentCategory) {
   const itemList = commands
     .map(({ category, name, url, icon }, i) => {
-      const iconEl = `<img src="assets/icons/${icon}.png" height="28px" style="fill : var(--foreground)" >`;
+      const iconEl = `<img src="assets/icons/${icon}.png" height="28px" style="filter : var(--imgFilter)" >`;
 
       if (category === currentCategory) {
         return `
@@ -62,15 +62,4 @@ function launchFolder() {
   loadCategory();
 
   buildAndAppendLists();
-
-  // for (i in categoryArray) {
-  //   const category = document.createElement("li");
-  //   category.classList.add("category");
-
-  //   const categoryName = document.createElement("h2");
-  //   categoryName.classList.add("category-name");
-  //   category.innerText = `${categoryArray[i]}`;
-  // }
 }
-
-launchFolder();

@@ -1,0 +1,81 @@
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+a,
+a:focus {
+  color: inherit;
+  outline: 0;
+}
+
+.categories {
+  display: none;
+}
+
+body.help .categories {
+  display: grid;
+}
+
+.category {
+  min-width: 225px;
+  width: 250px;
+  padding: 25px;
+}
+
+.category-name {
+  margin-top: 0.7rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.command-key {
+  display: inline;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.5rem;
+  text-align: center;
+  transition: all 0.4s;
+}
+
+.command-key img {
+  transition: all 0.4s;
+}
+
+.command a {
+  display: flex;
+  margin: 1rem 0;
+  line-height: 2rem;
+  text-decoration: none;
+}
+
+.command-name {
+  position: relative;
+}
+
+.command-name::after {
+  content: " ";
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  left: 0;
+  height: 2px;
+  transition: 0.2s;
+  transform: translateX(-2rem);
+  background: var(--foreground);
+  opacity: 0;
+}
+
+.command a:hover .command-name::after,
+.command a:focus .command-name::after {
+  transform: translateX(0);
+  opacity: 1;
+}

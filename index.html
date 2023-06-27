@@ -8,11 +8,18 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <div class="toggleColor"></div>
+
     <div class="main">
       <div class="container">
         <form autocomplete="off" class="search" onsubmit="return false;">
           <div id="search-area">
-            <input type="text" name="searchWord" autocomplete="off" />
+            <input
+              type="text"
+              name="searchWord"
+              autocomplete="off"
+              spellcheck="false"
+            />
           </div>
         </form>
 
@@ -26,5 +33,6 @@
     <script src="./js/direct.js"></script>
     <script src="./js/clock.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/eventListener.js"></script>
   </body>
 </html>

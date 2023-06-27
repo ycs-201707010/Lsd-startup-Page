@@ -1,9 +1,12 @@
 const pageBody = document.body;
 const searchInput = document.querySelector("#search-area input");
 const clock = document.getElementById("clock");
+const toggleBtn = document.querySelector(".toggleColor");
 
 function goFocus() {
-  searchInput.style.visibility = "visible";
+  pageBody.classList.remove("help");
+  toggleBtn.style.visibility = "hidden";
+  searchInput.style.display = "block";
   searchInput.focus();
 }
 
@@ -208,3 +211,6 @@ const commands = [
     quickLaunch: false,
   }, // end of Other
 ];
+
+/** 설정과 관련된 변수. (야간 / 주간 모드 등) */
+let invertColor = false; // true = 야간모드, false : 주간모드

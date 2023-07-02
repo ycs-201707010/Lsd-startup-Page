@@ -1,10 +1,29 @@
 /** 시계 */
 function getClock() {
   const today = new Date();
-  const hours = String(today.getHours()).padStart(2, "0");
-  const minutes = String(today.getMinutes()).padStart(2, "0");
+  let hours, minutes, textIn12;
+  if (mode24h === true) {
+    // 24시간 표기법일 때.
+    hours = String(today.getHours()).padStart(2, "0");
+    minutes = String(today.getMinutes()).padStart(2, "0");
+    textIn12 = "";
+  } else {
+    // am pm 표기법일 때.
+    if (today.getHours() < 12) {
+      hours = String(today.getHours()).padStart(2, "0");
+      textIn12 = "am";
+    } else if (today.getHours() === 12) {
+      hours = String(today.getHours()).padStart(2, "0");
+      textIn12 = "pm";
+    } else {
+      hours = String(today.getHours() - 12).padStart(2, "0");
+      textIn12 = "pm";
+    }
+    minutes = String(today.getMinutes()).padStart(2, "0");
+  }
 
-  clock.innerText = `${hours} ${minutes}`;
+  clockTime.innerText = `${hours} ${minutes}`;
+  clockAmpm.innerText = textIn12;
 }
 
 /** 시계를 클릭할 시 시계를 숨기고 바로가기 모음 창 띄우기 */

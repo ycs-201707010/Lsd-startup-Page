@@ -5,3 +5,10 @@
   letter-spacing: 0.05rem;
   cursor: pointer;
 }
+
+#clock .ampm {
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}

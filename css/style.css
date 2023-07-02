@@ -9,33 +9,10 @@
 }
 
 :root {
-  /* default colors */
-  --background: #f1f1f1;
-  --foreground: #15202b;
-  --imgFilter: invert(100%);
-
-  /* colors for command */
-  --twitter: #1c96e2;
-  --insta: linear-gradient(45deg, #445ce5, #7a3fbd, #db3171, #fc1e21);
-  --discord: #7289da;
-  --twitch: linear-gradient(to right bottom, #6341a4, #4d377f);
-  --youtube: linear-gradient(to right bottom, #cd221f, #cd4b1f);
-  --spotify: #1dd35e;
-  --netflix: #df0813;
-  --github: linear-gradient(to right bottom, #2b2b2b, #3b3b3b);
-  --naver: linear-gradient(135deg, #f2ce4d, #7db658, #20a16a, #3f8dd8);
-
   /* fonts */
   --base-font-size: 18px;
   --font-weight-normal: 500;
   --font-weight-bold: 900;
-}
-
-:root[color-theme="light"] {
-  /* light mode */
-  --background: #f1f1f1;
-  --foreground: #15202b;
-  --imgFilter: invert(100%);
 }
 
 :root[color-theme="dark"] {
@@ -43,6 +20,13 @@
   --background: #15202b;
   --foreground: #f1f1f1;
   --imgFilter: invert(0%);
+}
+
+:root[color-theme="light"] {
+  /* light mode */
+  --background: #f1f1f1;
+  --foreground: #15202b;
+  --imgFilter: invert(100%);
 }
 
 @font-face {
@@ -69,7 +53,12 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  transition: all 0.4s;
+}
+
+body[class*="def"],
+#directs .command-key,
+.command-key img {
+  transition: all 0.3s;
 }
 
 .main {
@@ -110,15 +99,36 @@ body {
   -ms-user-select: none;
 }
 
-.toggleColor {
+#collectBtn {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.toggleColor {
   width: 2rem;
   height: 2rem;
   background: var(--foreground);
   border-radius: 50%;
   cursor: pointer;
+  margin-bottom: 7px;
+}
+
+.toggleClockMode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--foreground);
+  color: var(--background);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 @media (min-width: 500px) {

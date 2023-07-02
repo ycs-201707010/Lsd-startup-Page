@@ -7,8 +7,11 @@
     <title>New Tab</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
-    <div class="toggleColor"></div>
+  <body class="def">
+    <div id="collectBtn">
+      <div class="toggleColor"></div>
+      <div class="toggleClockMode"></div>
+    </div>
 
     <div class="main">
       <div class="container">
@@ -23,7 +26,10 @@
           </div>
         </form>
 
-        <div id="clock" class="disable-select">00 00</div>
+        <div id="clock" class="disable-select">
+          <span class="time"></span>
+          <span class="ampm"></span>
+        </div>
 
         <div id="directs" class="disable-select"></div>
       </div>

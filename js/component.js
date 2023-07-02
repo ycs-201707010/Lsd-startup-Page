@@ -1,13 +1,17 @@
 const pageBody = document.body;
 const searchInput = document.querySelector("#search-area input");
-const clock = document.getElementById("clock");
-const toggleBtn = document.querySelector(".toggleColor");
+const tgleColor = document.querySelector(".toggleColor");
+const tgleClock = document.querySelector(".toggleClockMode");
+const clock = document.getElementById("clock"); // 시계 div
+const clockTime = clock.querySelector(".time"); // 시계의 시간부분 표기
+const clockAmpm = clock.querySelector(".ampm"); // Am Pm 구분
 
 function goFocus() {
   pageBody.classList.remove("help");
-  toggleBtn.style.visibility = "hidden";
+  tgleColor.style.visibility = "hidden";
   searchInput.style.display = "block";
   searchInput.focus();
+  pageBody.classList.remove("def");
 }
 
 const commands = [
@@ -213,4 +217,6 @@ const commands = [
 ];
 
 /** 설정과 관련된 변수. (야간 / 주간 모드 등) */
-let invertColor = false; // true = 야간모드, false : 주간모드
+let invertColor; // true = 야간모드, false : 주간모드
+
+let mode24h; // true = 24시간 표기법, false = am, pm 표기법
